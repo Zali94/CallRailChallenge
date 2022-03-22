@@ -1,30 +1,31 @@
 //
-//  WeatherViewModel.swift
+//  EarthQuakeViewModel.swift
 //  CallRailChallenge
 //
 //  Created by Z Ali on 3/21/22.
 //
 
+
 import Foundation
-typealias CompletionHandler = (([Results])->())
-class WeatherViewModel
+typealias CompletionHandler = (([Features])->())
+class EarthQuakeViewModel
 {
-    var array = [Results]()
+    var array = [Features]()
     var error: Error?
     
     func fetchData(completionHandler: @escaping CompletionHandler)
     {
-        guard let url = URL.init(string: "http://api.weatherapi.com/v1/forecast.json?key=d0f13b5fd0944cdbad5220500222103&q=London&days=1&aqi=no&alerts=no")
+        guard let url = URL.init(string: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson")
         else{return}
         
         URLSession.shared.dataTask(with: url)
         {(data, response, error) in
             if error == nil && data != nil {
                 let jd = JSONDecoder.init()
-                let result = try! jd.decode(WeatherModel.self, from: data!)
+                let result = try! jd.decode(EarthquakeModel.self, from: data!)
                 self.error = nil
                 print(result)
-                completionHandler(result.results)
+                completionHandler(result.features)
             }
             else {
                 print(error?.localizedDescription)
@@ -37,13 +38,13 @@ class WeatherViewModel
         return array.count
     }
     
-    func getWeatherIndex(index: Int) -> Results {
+    func getEarthQuakeIndex(index: Int) -> Features {
         return array[index]
     }
     
-    func getCityName(results: Results)->String {
-        let cityName = results.location.name
-        return cityName
+    func getLocation(features: Features)->String {
+        let location = features.properties.place
+        return location
     }
     
     
