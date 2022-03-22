@@ -16,6 +16,8 @@
 		3168683927E929630026210E /* CallRailChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168683827E929630026210E /* CallRailChallengeTests.swift */; };
 		3168684327E929630026210E /* CallRailChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168684227E929630026210E /* CallRailChallengeUITests.swift */; };
 		3168684527E929630026210E /* CallRailChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168684427E929630026210E /* CallRailChallengeUITestsLaunchTests.swift */; };
+		3168685227E9309B0026210E /* weatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685127E9309B0026210E /* weatherModel.swift */; };
+		3168685427E935DD0026210E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685327E935DD0026210E /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3168683E27E929630026210E /* CallRailChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallRailChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3168684227E929630026210E /* CallRailChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRailChallengeUITests.swift; sourceTree = "<group>"; };
 		3168684427E929630026210E /* CallRailChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRailChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3168685127E9309B0026210E /* weatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherModel.swift; sourceTree = "<group>"; };
+		3168685327E935DD0026210E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3168682327E929620026210E /* SceneDelegate.swift */,
 				3168682527E929620026210E /* ViewController.swift */,
 				3168682727E929620026210E /* Main.storyboard */,
+				3168685127E9309B0026210E /* weatherModel.swift */,
+				3168685327E935DD0026210E /* WeatherViewModel.swift */,
 				3168682A27E929630026210E /* Assets.xcassets */,
 				3168682C27E929630026210E /* LaunchScreen.storyboard */,
 				3168682F27E929630026210E /* Info.plist */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3168685427E935DD0026210E /* WeatherViewModel.swift in Sources */,
 				3168682627E929620026210E /* ViewController.swift in Sources */,
 				3168682227E929620026210E /* AppDelegate.swift in Sources */,
+				3168685227E9309B0026210E /* weatherModel.swift in Sources */,
 				3168682427E929620026210E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
