@@ -34,9 +34,29 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let index = VM.getEarthQuakeIndex(index: indexPath.row)
         let location = VM.getLocation(features: index)
+        let mag = VM.getMagnitude(features: index)
+        let time = VM.getTime(features: index)
+        
         cell.locationName.text = location 
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SHOWDETAIL"
+        {
+            let vc = segue.destination as! detailViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let index = VM.getEarthQuakeIndex(index: indexPath.row)
+                vc.earthQuakeLabel.text = VM.getLocation(features: index)
+                vc.magLabel.text = VM.getMagnitude(features: index)
+                vc.tsunamiLabel.text = VM.getTsunami(features: index)
+                vc.updateLabel.text = VM.getUpdated(features: index)
+                vc.timeLabel.text = VM.getTime(features: index)
+            }
+        }
     }
 
 

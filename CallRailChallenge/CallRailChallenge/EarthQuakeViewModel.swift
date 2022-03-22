@@ -47,6 +47,45 @@ class EarthQuakeViewModel
         return location
     }
     
+    func getMagnitude(features: Features)->String {
+        let mag = features.properties.mag
+        
+        return NSDecimalNumber(decimal: mag).stringValue
+    }
     
+    func getTime(features: Features)->String {
+        let time = features.properties.time
+        
+        let date = NSDate(timeIntervalSince1970: Double(time) / 1000)
+        let formatter = DateFormatter()
+        formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        formatter.dateFormat = "hh mm ss"
+        
+        let formattedTime = formatter.string(from: date as Date)
+        
+        return formattedTime
+    }
+    
+    func getUpdated(features: Features)->String {
+        let time = features.properties.updated
+        
+        let date = NSDate(timeIntervalSince1970: Double(time) / 1000)
+        let formatter = DateFormatter()
+        formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        formatter.dateFormat = "hh mm ss"
+        
+        let formattedTime = formatter.string(from: date as Date)
+        
+        return formattedTime
+    }
+    
+    func getTsunami(features: Features)->String {
+        let  indicator = features.properties.tsunami
+        
+        if(indicator == 0) {
+            return "No Tsunami Occured"
+        }
+        return "Tsunami Occured"
+    }
     
 }

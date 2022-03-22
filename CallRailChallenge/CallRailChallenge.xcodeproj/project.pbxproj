@@ -19,6 +19,7 @@
 		3168685627E964F40026210E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685527E964F40026210E /* TableViewCell.swift */; };
 		3168685827E968BB0026210E /* EarthQuakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685727E968BB0026210E /* EarthQuakeViewModel.swift */; };
 		3168685A27E968EF0026210E /* EarthQuakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685927E968EF0026210E /* EarthQuakeModel.swift */; };
+		3168685C27E96EFD0026210E /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168685B27E96EFD0026210E /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3168685527E964F40026210E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3168685727E968BB0026210E /* EarthQuakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthQuakeViewModel.swift; sourceTree = "<group>"; };
 		3168685927E968EF0026210E /* EarthQuakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthQuakeModel.swift; sourceTree = "<group>"; };
+		3168685B27E96EFD0026210E /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3168682327E929620026210E /* SceneDelegate.swift */,
 				3168682527E929620026210E /* ViewController.swift */,
 				3168682727E929620026210E /* Main.storyboard */,
+				3168685B27E96EFD0026210E /* detailViewController.swift */,
 				3168685527E964F40026210E /* TableViewCell.swift */,
 				3168685727E968BB0026210E /* EarthQuakeViewModel.swift */,
 				3168685927E968EF0026210E /* EarthQuakeModel.swift */,
@@ -272,6 +275,7 @@
 				3168682227E929620026210E /* AppDelegate.swift in Sources */,
 				3168685A27E968EF0026210E /* EarthQuakeModel.swift in Sources */,
 				3168685627E964F40026210E /* TableViewCell.swift in Sources */,
+				3168685C27E96EFD0026210E /* detailViewController.swift in Sources */,
 				3168682427E929620026210E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

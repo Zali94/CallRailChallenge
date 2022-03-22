@@ -20,4 +20,9 @@ struct Features: Decodable
 struct Properties: Decodable
 {
     let place :  String
+    let mag: Decimal
+    let time: CLong
+    let updated: CLong
+    let tsunami: Int
+    
 }
