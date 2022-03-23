@@ -28,7 +28,6 @@ class EarthQuakeViewModel
                 let jd = JSONDecoder.init()
                 let result = try! jd.decode(EarthquakeModel.self, from: data!)
                 self.error = nil
-                print(result)
                 completionHandler(result.features)
             }
             else {
