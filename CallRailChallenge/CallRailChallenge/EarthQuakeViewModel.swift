@@ -28,7 +28,7 @@ class EarthQuakeViewModel
                 completionHandler(result.features)
             }
             else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "Error")
             }
         }.resume()
     }
