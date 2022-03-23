@@ -22,6 +22,7 @@ class detailViewController: UIViewController {
     var mag: String!
     var time: String!
     var updatedTime: String!
+    var url: String!
     
     
 
@@ -36,10 +37,12 @@ class detailViewController: UIViewController {
         magLabel.text = mag
     }
     
-    
-    
-    
-    
-
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "SHOWDETAIL"
+            {
+                let vc = segue.destination as! webViewController
+                    vc.path = url
+            }
+        }
 
 }

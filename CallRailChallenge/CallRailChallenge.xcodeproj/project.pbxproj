@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311B59A127EAD2810029148F /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311B59A027EAD2810029148F /* webViewController.swift */; };
 		3168682227E929620026210E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168682127E929620026210E /* AppDelegate.swift */; };
 		3168682427E929620026210E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168682327E929620026210E /* SceneDelegate.swift */; };
 		3168682627E929620026210E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168682527E929620026210E /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		311B59A027EAD2810029148F /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		3168681E27E929620026210E /* CallRailChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallRailChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3168682127E929620026210E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3168682327E929620026210E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				3168682327E929620026210E /* SceneDelegate.swift */,
 				3168682527E929620026210E /* ViewController.swift */,
 				3168682727E929620026210E /* Main.storyboard */,
+				311B59A027EAD2810029148F /* webViewController.swift */,
 				3168685B27E96EFD0026210E /* detailViewController.swift */,
 				3168685527E964F40026210E /* TableViewCell.swift */,
 				3168685727E968BB0026210E /* EarthQuakeViewModel.swift */,
@@ -277,6 +280,7 @@
 				3168685627E964F40026210E /* TableViewCell.swift in Sources */,
 				3168685C27E96EFD0026210E /* detailViewController.swift in Sources */,
 				3168682427E929620026210E /* SceneDelegate.swift in Sources */,
+				311B59A127EAD2810029148F /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

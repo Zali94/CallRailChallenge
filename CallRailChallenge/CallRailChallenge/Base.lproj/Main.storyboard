@@ -134,10 +134,22 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="magLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-fm-ijA">
                                 <rect key="frame" x="154" y="320" width="130" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-sV-wKE">
+                                <rect key="frame" x="49" y="423" width="316" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Check Site For More Info">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="23"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ka2-8g-VsN" kind="showDetail" identifier="SHOWDETAIL" id="H0v-AT-xSI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GgT-wK-QDn"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -153,6 +165,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNK-X1-4zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782.608695652174" y="116.51785714285714"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="VX4-1d-upP">
+            <objects>
+                <viewController id="Ka2-8g-VsN" customClass="webViewController" customModule="CallRailChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iy1-8h-RZj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qp-5G-fvE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SKD-ap-F3x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Qp-5G-fvE" firstAttribute="leading" secondItem="SKD-ap-F3x" secondAttribute="leading" id="8kY-RZ-0Mb"/>
+                            <constraint firstItem="SKD-ap-F3x" firstAttribute="bottom" secondItem="0Qp-5G-fvE" secondAttribute="bottom" id="HSi-Qm-hC9"/>
+                            <constraint firstItem="SKD-ap-F3x" firstAttribute="trailing" secondItem="0Qp-5G-fvE" secondAttribute="trailing" id="rFz-em-9XP"/>
+                            <constraint firstItem="0Qp-5G-fvE" firstAttribute="top" secondItem="SKD-ap-F3x" secondAttribute="top" id="x7O-7r-8Ul"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="0Qp-5G-fvE" id="O67-RY-Adr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEK-eK-ZFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rnl-XZ-stp">
@@ -174,6 +220,12 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

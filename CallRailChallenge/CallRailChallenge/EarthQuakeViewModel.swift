@@ -88,4 +88,9 @@ class EarthQuakeViewModel
         return "Tsunami Occured"
     }
     
+    func getURL(features: Features)-> String {
+        let url = features.properties.url
+        return url
+    }
+    
 }

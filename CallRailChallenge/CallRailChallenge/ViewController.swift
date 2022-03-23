@@ -49,29 +49,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         vc.updatedTime = VM.getUpdated(features: index)
         vc.tsunami = VM.getTsunami(features: index)
         vc.mag = VM.getMagnitude(features: index)
+        vc.url = VM.getURL(features: index)
 
 
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "SHOWDETAIL"
-//        {
-//            let vc = segue.destination as! detailViewController
-//
-//            if let indexPath = self.tableView.indexPathForSelectedRow
-//            {
-//                let index = VM.getEarthQuakeIndex(index: indexPath.row)
-//                vc.indexAt = indexPath.row
-//                vc.earthQuakeLabel.text = VM.getLocation(features: index)
-//                vc.timeLabel.text = VM.getTime(features: index)
-//                vc.updateLabel.text = VM.getUpdated(features: index)
-//                vc.tsunamiLabel.text = VM.getTsunami(features: index)
-//                vc.magLabel.text = VM.getMagnitude(features: index)
-//            }
-//        }
-//    }
-
 
 }
 

@@ -24,5 +24,6 @@ struct Properties: Decodable
     let time: CLong
     let updated: CLong
     let tsunami: Int
+    let url: String
     
 }
