@@ -59,7 +59,7 @@ class EarthQuakeViewModel
         let date = NSDate(timeIntervalSince1970: Double(time) / 1000)
         let formatter = DateFormatter()
         formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-        formatter.dateFormat = "hh mm ss"
+        formatter.dateFormat = "hh:mm:ss"
         
         let formattedTime = formatter.string(from: date as Date)
         
@@ -72,7 +72,7 @@ class EarthQuakeViewModel
         let date = NSDate(timeIntervalSince1970: Double(time) / 1000)
         let formatter = DateFormatter()
         formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-        formatter.dateFormat = "hh mm ss"
+        formatter.dateFormat = "hh:mm:ss"
         
         let formattedTime = formatter.string(from: date as Date)
         

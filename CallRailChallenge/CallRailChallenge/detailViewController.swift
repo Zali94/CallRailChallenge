@@ -31,10 +31,11 @@ class detailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         earthQuakeLabel.text! = name
-        timeLabel.text = time
-        updateLabel.text = updatedTime
+        timeLabel.text = "\(time ?? "") UTC"
+        updateLabel.text = "\(updatedTime ?? "") UTC"
         tsunamiLabel.text = tsunami
         magLabel.text = mag
+        navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,5 +45,4 @@ class detailViewController: UIViewController {
                     vc.path = url
             }
         }
-
 }
