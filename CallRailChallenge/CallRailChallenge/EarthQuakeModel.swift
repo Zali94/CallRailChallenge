@@ -7,8 +7,10 @@
 
 import Foundation
 
+//setting up Model to decode in coming API JSON data
 struct EarthquakeModel: Decodable
 {
+    //will store data into an array format
     let features : [Features]
 }
 

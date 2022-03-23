@@ -6,13 +6,17 @@
 //
 
 
+//Main ViewModel Class. This will hold most of the bussines logic for this app
+
 import Foundation
 typealias CompletionHandler = (([Features])->())
 class EarthQuakeViewModel
 {
+    //initial variables
     var array = [Features]()
     var error: Error?
     
+    //main fetch API Handler here, will intialize URL and then decode the incoming JSON data as per our model
     func fetchData(completionHandler: @escaping CompletionHandler)
     {
         guard let url = URL.init(string: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson")
@@ -33,26 +37,27 @@ class EarthQuakeViewModel
         }.resume()
     }
     
+    //number of rows to populate for tableView
     func getRow() -> Int
     {
         return array.count
     }
-    
+    //return the index for items we will get the specific details for
     func getEarthQuakeIndex(index: Int) -> Features {
         return array[index]
     }
-    
+    //returns location details
     func getLocation(features: Features)->String {
         let location = features.properties.place
         return location
     }
-    
+    //returns mag details
     func getMagnitude(features: Features)->String {
         let mag = features.properties.mag
         
         return NSDecimalNumber(decimal: mag).stringValue
     }
-    
+    //returns time details along with formatting it in UTC
     func getTime(features: Features)->String {
         let time = features.properties.time
         
@@ -65,7 +70,7 @@ class EarthQuakeViewModel
         
         return formattedTime
     }
-    
+    //returns last upadated timings details with formatting it in UTC
     func getUpdated(features: Features)->String {
         let time = features.properties.updated
         
@@ -78,7 +83,7 @@ class EarthQuakeViewModel
         
         return formattedTime
     }
-    
+    //returns tsunami details
     func getTsunami(features: Features)->String {
         let  indicator = features.properties.tsunami
         
@@ -87,7 +92,7 @@ class EarthQuakeViewModel
         }
         return "Tsunami Occured"
     }
-    
+    //returns url details
     func getURL(features: Features)-> String {
         let url = features.properties.url
         return url

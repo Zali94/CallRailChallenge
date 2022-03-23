@@ -10,6 +10,7 @@ import WebKit
 
 class webViewController: UIViewController {
     
+    //webView viewController, we improted  WebKit and also connected our webView
     @IBOutlet weak var webView: WKWebView!
     
     var path: String?
@@ -17,6 +18,7 @@ class webViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //confrirming that we have a valid url and if so continue and reuquest to load the URL
         if let url = URL(string: path ?? "") {
             let request = URLRequest(url: url)
             webView.load(request)

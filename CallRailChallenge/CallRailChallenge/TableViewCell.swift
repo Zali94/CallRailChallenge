@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    // cell class for personalized cell setup
     @IBOutlet weak var locationName: UILabel!
     
     override func awakeFromNib() {
