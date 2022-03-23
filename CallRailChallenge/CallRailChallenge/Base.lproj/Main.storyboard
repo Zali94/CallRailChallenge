@@ -40,7 +40,6 @@
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <connections>
                                             <outlet property="locationName" destination="UR7-oN-QFr" id="5j5-IL-Mw2"/>
-                                            <segue destination="bD9-qF-9Fq" kind="showDetail" identifier="SHOWDETAIL" id="jVi-66-BRP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -71,9 +70,9 @@
         <!--Detail View Controller-->
         <scene sceneID="2lq-XO-7iE">
             <objects>
-                <viewController id="bD9-qF-9Fq" customClass="detailViewController" customModule="CallRailChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewController" id="bD9-qF-9Fq" customClass="detailViewController" customModule="CallRailChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bdu-xh-zla">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Occured: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O39-LA-jMb">

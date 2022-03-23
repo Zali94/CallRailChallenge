@@ -17,14 +17,28 @@ class detailViewController: UIViewController {
     
     var VM = EarthQuakeViewModel()
     
+    var name : String!
+    var tsunami: String!
+    var mag: String!
+    var time: String!
+    var updatedTime: String!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
+        earthQuakeLabel.text! = name
+        timeLabel.text = time
+        updateLabel.text = updatedTime
+        tsunamiLabel.text = tsunami
+        magLabel.text = mag
     }
+    
+    
+    
+    
     
 
 
